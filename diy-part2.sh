@@ -18,3 +18,5 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+sed -i 's/1.89.0/1.92.0/g' feeds/packages/lang/rust/Makefile
