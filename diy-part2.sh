@@ -20,3 +20,4 @@
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 sed -i 's/1.89.0/1.92.0/g' feeds/packages/lang/rust/Makefile
+sed -i 's/0b9d55610d8270e06c44f459d1e2b7918a5e673809c592abed9b9c600e33d95a/ebee170bfe4c4dfc59521a101de651e5534f4dae889756a5c97ca9ea40d0c307/g' feeds/packages/lang/rust/Makefile
