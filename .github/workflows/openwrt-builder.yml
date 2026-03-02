@@ -20,8 +20,8 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/naizhao/immortalwrt-orangepi-r2s
-  REPO_BRANCH: orangepi-r2s-new
+  REPO_URL: https://github.com/LaXiS96/openwrt-orangepi-r2s
+  REPO_BRANCH: openwrt-24.10
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
@@ -116,7 +116,9 @@ jobs:
     - name: Compile the firmware
       id: compile
       run: |
-        cd openwrt
+        cd openwrt/package
+        git clone https://github.com/jerrykuku/luci-theme-argon.git
+        cd ../
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         go version
