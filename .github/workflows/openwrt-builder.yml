@@ -115,6 +115,7 @@ jobs:
     - name: Compile the firmware
       id: compile
       run: |
+        cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         echo -e "$(nproc) thread compile"
